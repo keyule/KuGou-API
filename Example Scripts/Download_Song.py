@@ -1,7 +1,15 @@
-#!/usr/bin/env python3
+'''
+Downloads a song given a URL as input
+Example URL: https://www.kugou.com/song/#hash=FBD3B28DD04462E3A681A9BC5E9D37C0&album_id=20795407
+
+Requirements:
+requests
+tqdm 
+json
+
+'''
 
 import requests
-import re
 import json
 import sys
 from tqdm import tqdm
@@ -40,11 +48,5 @@ if __name__ == '__main__':
 
     fname = data["data"]['audio_name'] + '.mp3'
     downloadUrl = data['data']['play_url']
-
-    print(json.dumps(data, indent=4))
-    print(data['data']['lyrics'])
-
-    with open('data.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4) 
 
     download_file(downloadUrl,fname)
