@@ -1,4 +1,13 @@
-#!/usr/bin/env python3
+'''
+Plays a song given a URL as input
+Example URL: https://www.kugou.com/song/#hash=FBD3B28DD04462E3A681A9BC5E9D37C0&album_id=20795407
+
+Requirements:
+requests
+tqdm 
+vlc
+json
+'''
 
 import requests
 import re
@@ -20,23 +29,6 @@ def get_data(url):
     data = data[:-2]
     return json.loads(data)
 
-def download_file(url,fname):
-    resp = requests.get(url, stream=True)
-    total = int(resp.headers.get('content-length', 0))
-    with open(fname, 'wb') as file, tqdm(
-            desc=fname,
-            total=total,
-            unit='iB',
-            unit_scale=True,
-            unit_divisor=1024,
-    ) as bar:
-        for data in resp.iter_content(chunk_size=1024):
-            size = file.write(data)
-            bar.update(size)
-
-    print('Download Complete')
-    return
-
 def play_song(url):
     instance = vlc.Instance('--input-repeat=-1', '--fullscreen')
     player=instance.media_player_new()
@@ -55,6 +47,6 @@ if __name__ == '__main__':
 
     fname = data["data"]['audio_name'] + '.mp3'
     downloadUrl = data['data']['play_url']
-    #download_file(downloadUrl,fname)
+
     print(f"playing {fname}... Ctrl+C to stop")
     play_song(downloadUrl)
