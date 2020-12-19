@@ -1551,6 +1551,7 @@ Field | Description
 ------------ | -------------
 pagesize | pagesize
 page | page
+
 Others: *version, ranktype, area_code, with_res_tag, plat*
 
 #### Example
@@ -1866,7 +1867,7 @@ http://mobilecdnbj.kugou.com/api/v3/rank/song?volid=47843&rankid=24971&pagesize=
 ## Others
 
 #### List of New Songs
-: This is listed as 新歌首发 on the home page
+This is listed as 新歌首发 on the home page
 ```
 http://mobilecdnbj.kugou.com/api/v3/rank/newsong?version=9108&plat=0&with_cover=1&pagesize=100&type=1&area_code=1&page=1&with_res_tag=1
 ```
