@@ -27,6 +27,7 @@ tag_aggr | 1 to show aggregates of each tag type
 highlight | highlights the title eg: em,br
 pagesize | pagesize
 page | page
+  
 Others that I have no idea does what: showtype, sver, correct, api_ver, version, tag, with_res_tag
 
 ##### Example
@@ -34,9 +35,8 @@ Searching for 安静 but only live versions. Return first 5 results
 ```
 http://msearchcdn.kugou.com/api/v3/search/song?&plat=0&keyword=安静&tagtype=现场&pagesize=5
 ```
-<details>
-  <summary>Response</summary>
+<details><summary>Response:</summary><p>
   ```
-  long console output here
+  test
   ```
-</details>
+</p></details>
