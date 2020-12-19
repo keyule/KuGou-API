@@ -217,7 +217,7 @@ Others: *version, plat, showtype, parentid, apiver, area_code, with_res*
 #### Example
 Getting list of Rankings and show top 3 songs
 ```
-http://mobilecdnbj.kugou.com/api/v3/rank/list&withsong=1
+http://mobilecdnbj.kugou.com/api/v3/rank/list?withsong=1
 ```
 <details><summary>Response:</summary>
 
@@ -1066,6 +1066,465 @@ http://mobilecdnbj.kugou.com/api/v3/rank/list&withsong=1
             "issue": 8
         }],
         "total": 31
+    },
+    "errcode": 0
+}
+```
+</details>
+
+## Get Volume ID of Ranking List
+
+#### URL
+```
+http://mobilecdnbj.kugou.com/api/v3/rank/vol
+```
+#### Params
+##### Required
+Field | Description
+------------ | -------------
+rankid | rankid of the list you want
+
+>**Note:** Rank ID can be obtained from the list of rankings above
+
+##### Optional
+Others: *ranktype, plat, with_rest_tag*
+
+#### Example
+Getting list of volume IDs for the DJ热歌榜 rankings
+```
+http://mobilecdnbj.kugou.com/api/v3/rank/vol?rankid=24971
+```
+<details><summary>Response:</summary>
+
+```json
+{
+    "status": 1,
+    "error": "",
+    "data": {
+        "timestamp": 1608366572,
+        "info": [{
+            "vols": [{
+                "volid": 47843,
+                "volname": "51期",
+                "voltitle": "51期"
+            }, {
+                "volid": 47697,
+                "volname": "50期",
+                "voltitle": "50期"
+            }, {
+                "volid": 47571,
+                "volname": "49期",
+                "voltitle": "49期"
+            }, {
+                "volid": 47441,
+                "volname": "48期",
+                "voltitle": "48期"
+            }, {
+                "volid": 47323,
+                "volname": "47期",
+                "voltitle": "47期"
+            }, {
+                "volid": 47215,
+                "volname": "46期",
+                "voltitle": "46期"
+            }, {
+                "volid": 47106,
+                "volname": "45期",
+                "voltitle": "45期"
+            }, {
+                "volid": 46940,
+                "volname": "44期",
+                "voltitle": "44期"
+            }, {
+                "volid": 46806,
+                "volname": "43期",
+                "voltitle": "43期"
+            }, {
+                "volid": 46687,
+                "volname": "42期",
+                "voltitle": "42期"
+            }, {
+                "volid": 46570,
+                "volname": "41期",
+                "voltitle": "41期"
+            }, {
+                "volid": 46447,
+                "volname": "40期",
+                "voltitle": "40期"
+            }, {
+                "volid": 46324,
+                "volname": "39期",
+                "voltitle": "39期"
+            }, {
+                "volid": 46207,
+                "volname": "38期",
+                "voltitle": "38期"
+            }, {
+                "volid": 46089,
+                "volname": "37期",
+                "voltitle": "37期"
+            }, {
+                "volid": 45973,
+                "volname": "36期",
+                "voltitle": "36期"
+            }, {
+                "volid": 45855,
+                "volname": "35期",
+                "voltitle": "35期"
+            }, {
+                "volid": 45744,
+                "volname": "34期",
+                "voltitle": "34期"
+            }, {
+                "volid": 45603,
+                "volname": "33期",
+                "voltitle": "33期"
+            }, {
+                "volid": 45484,
+                "volname": "32期",
+                "voltitle": "32期"
+            }, {
+                "volid": 45363,
+                "volname": "31期",
+                "voltitle": "31期"
+            }, {
+                "volid": 45246,
+                "volname": "30期",
+                "voltitle": "30期"
+            }, {
+                "volid": 45125,
+                "volname": "29期",
+                "voltitle": "29期"
+            }, {
+                "volid": 44975,
+                "volname": "28期",
+                "voltitle": "28期"
+            }, {
+                "volid": 44851,
+                "volname": "27期",
+                "voltitle": "27期"
+            }, {
+                "volid": 44699,
+                "volname": "26期",
+                "voltitle": "26期"
+            }, {
+                "volid": 44562,
+                "volname": "25期",
+                "voltitle": "25期"
+            }, {
+                "volid": 44424,
+                "volname": "24期",
+                "voltitle": "24期"
+            }, {
+                "volid": 44289,
+                "volname": "23期",
+                "voltitle": "23期"
+            }, {
+                "volid": 44153,
+                "volname": "22期",
+                "voltitle": "22期"
+            }, {
+                "volid": 44021,
+                "volname": "21期",
+                "voltitle": "21期"
+            }, {
+                "volid": 43890,
+                "volname": "20期",
+                "voltitle": "20期"
+            }, {
+                "volid": 43760,
+                "volname": "19期",
+                "voltitle": "19期"
+            }, {
+                "volid": 43626,
+                "volname": "18期",
+                "voltitle": "18期"
+            }, {
+                "volid": 43492,
+                "volname": "17期",
+                "voltitle": "17期"
+            }, {
+                "volid": 43343,
+                "volname": "16期",
+                "voltitle": "16期"
+            }, {
+                "volid": 43208,
+                "volname": "15期",
+                "voltitle": "15期"
+            }, {
+                "volid": 43058,
+                "volname": "14期",
+                "voltitle": "14期"
+            }, {
+                "volid": 42924,
+                "volname": "13期",
+                "voltitle": "13期"
+            }, {
+                "volid": 42790,
+                "volname": "12期",
+                "voltitle": "12期"
+            }, {
+                "volid": 42677,
+                "volname": "11期",
+                "voltitle": "11期"
+            }, {
+                "volid": 40815,
+                "volname": "10期",
+                "voltitle": "10期"
+            }, {
+                "volid": 40679,
+                "volname": "9期",
+                "voltitle": "9期"
+            }, {
+                "volid": 40557,
+                "volname": "8期",
+                "voltitle": "8期"
+            }, {
+                "volid": 40446,
+                "volname": "7期",
+                "voltitle": "7期"
+            }, {
+                "volid": 40343,
+                "volname": "6期",
+                "voltitle": "6期"
+            }, {
+                "volid": 40246,
+                "volname": "5期",
+                "voltitle": "5期"
+            }, {
+                "volid": 40145,
+                "volname": "4期",
+                "voltitle": "4期"
+            }, {
+                "volid": 40052,
+                "volname": "3期",
+                "voltitle": "3期"
+            }, {
+                "volid": 39945,
+                "volname": "2期",
+                "voltitle": "2期"
+            }, {
+                "volid": 39812,
+                "volname": "1期",
+                "voltitle": "1期"
+            }],
+            "year": 2020
+        }, {
+            "vols": [{
+                "volid": 39722,
+                "volname": "53期",
+                "voltitle": "53期"
+            }, {
+                "volid": 39592,
+                "volname": "52期",
+                "voltitle": "52期"
+            }, {
+                "volid": 39483,
+                "volname": "51期",
+                "voltitle": "51期"
+            }, {
+                "volid": 39379,
+                "volname": "50期",
+                "voltitle": "50期"
+            }, {
+                "volid": 39266,
+                "volname": "49期",
+                "voltitle": "49期"
+            }, {
+                "volid": 39129,
+                "volname": "48期",
+                "voltitle": "48期"
+            }, {
+                "volid": 39006,
+                "volname": "47期",
+                "voltitle": "47期"
+            }, {
+                "volid": 38891,
+                "volname": "46期",
+                "voltitle": "46期"
+            }, {
+                "volid": 38765,
+                "volname": "45期",
+                "voltitle": "45期"
+            }, {
+                "volid": 38648,
+                "volname": "44期",
+                "voltitle": "44期"
+            }, {
+                "volid": 38537,
+                "volname": "43期",
+                "voltitle": "43期"
+            }, {
+                "volid": 38430,
+                "volname": "42期",
+                "voltitle": "42期"
+            }, {
+                "volid": 38328,
+                "volname": "41期",
+                "voltitle": "41期"
+            }, {
+                "volid": 38218,
+                "volname": "40期",
+                "voltitle": "40期"
+            }, {
+                "volid": 38131,
+                "volname": "39期",
+                "voltitle": "39期"
+            }, {
+                "volid": 38042,
+                "volname": "38期",
+                "voltitle": "38期"
+            }, {
+                "volid": 37955,
+                "volname": "37期",
+                "voltitle": "37期"
+            }, {
+                "volid": 37877,
+                "volname": "36期",
+                "voltitle": "36期"
+            }, {
+                "volid": 37776,
+                "volname": "35期",
+                "voltitle": "35期"
+            }, {
+                "volid": 37692,
+                "volname": "34期",
+                "voltitle": "34期"
+            }, {
+                "volid": 37585,
+                "volname": "33期",
+                "voltitle": "33期"
+            }, {
+                "volid": 37492,
+                "volname": "32期",
+                "voltitle": "32期"
+            }, {
+                "volid": 37404,
+                "volname": "31期",
+                "voltitle": "31期"
+            }, {
+                "volid": 37322,
+                "volname": "30期",
+                "voltitle": "30期"
+            }, {
+                "volid": 37236,
+                "volname": "29期",
+                "voltitle": "29期"
+            }, {
+                "volid": 37154,
+                "volname": "28期",
+                "voltitle": "28期"
+            }, {
+                "volid": 37072,
+                "volname": "27期",
+                "voltitle": "27期"
+            }, {
+                "volid": 36993,
+                "volname": "26期",
+                "voltitle": "26期"
+            }, {
+                "volid": 36917,
+                "volname": "25期",
+                "voltitle": "25期"
+            }, {
+                "volid": 36840,
+                "volname": "24期",
+                "voltitle": "24期"
+            }, {
+                "volid": 36738,
+                "volname": "23期",
+                "voltitle": "23期"
+            }, {
+                "volid": 36654,
+                "volname": "22期",
+                "voltitle": "22期"
+            }, {
+                "volid": 36572,
+                "volname": "21期",
+                "voltitle": "21期"
+            }, {
+                "volid": 36495,
+                "volname": "20期",
+                "voltitle": "20期"
+            }, {
+                "volid": 36417,
+                "volname": "19期",
+                "voltitle": "19期"
+            }, {
+                "volid": 36344,
+                "volname": "18期",
+                "voltitle": "18期"
+            }, {
+                "volid": 36274,
+                "volname": "17期",
+                "voltitle": "17期"
+            }, {
+                "volid": 36184,
+                "volname": "16期",
+                "voltitle": "16期"
+            }, {
+                "volid": 36111,
+                "volname": "15期",
+                "voltitle": "15期"
+            }, {
+                "volid": 36048,
+                "volname": "14期",
+                "voltitle": "14期"
+            }, {
+                "volid": 35956,
+                "volname": "13期",
+                "voltitle": "13期"
+            }, {
+                "volid": 35945,
+                "volname": "12期",
+                "voltitle": "12期"
+            }, {
+                "volid": 35869,
+                "volname": "11期",
+                "voltitle": "11期"
+            }, {
+                "volid": 35785,
+                "volname": "10期",
+                "voltitle": "10期"
+            }, {
+                "volid": 35710,
+                "volname": "9期",
+                "voltitle": "9期"
+            }, {
+                "volid": 35637,
+                "volname": "8期",
+                "voltitle": "8期"
+            }, {
+                "volid": 35561,
+                "volname": "7期",
+                "voltitle": "7期"
+            }, {
+                "volid": 35488,
+                "volname": "6期",
+                "voltitle": "6期"
+            }, {
+                "volid": 35417,
+                "volname": "5期",
+                "voltitle": "5期"
+            }, {
+                "volid": 35341,
+                "volname": "4期",
+                "voltitle": "4期"
+            }, {
+                "volid": 35270,
+                "volname": "3期",
+                "voltitle": "3期"
+            }, {
+                "volid": 35184,
+                "volname": "2期",
+                "voltitle": "2期"
+            }, {
+                "volid": 35114,
+                "volname": "1期",
+                "voltitle": "1期"
+            }],
+            "year": 2019
+        }]
     },
     "errcode": 0
 }
