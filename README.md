@@ -23,7 +23,7 @@ keyword | What you want to search for
 Field | Description
 ------------ | -------------
 tagtype | 全部(Show All), DJ, 现场, 广场舞, 伴奏, 铃声 
-tag_aggr | 1 to show aggregates of each tag type
+tag_aggr | `1` to show aggregates of each tag type
 highlight | highlights the title eg: em,br
 pagesize | pagesize
 page | page
@@ -145,8 +145,8 @@ https://wwwapi.kugou.com/yy/index.php?r=play/getdata
 ##### Required
 Field | Description
 ------------ | -------------
-callback | jQuery19107732973609967178_1607543233092 *required no idea what it is*
-mid | =1 *can be almost any number*
+callback | `jQuery19107732973609967178_1607543233092` *required no idea what it is*
+mid | `1` *can be almost any number*
 hash | hash of the song
 album_id | album ID of the song
 
@@ -210,7 +210,7 @@ http://mobilecdnbj.kugou.com/api/v3/rank/list
 ##### Optional
 Field | Description
 ------------ | -------------
-withsong | 1 will show the top 3 songs
+withsong | `1` will show the top 3 songs
 
 Others: *version, plat, showtype, parentid, apiver, area_code, with_res*
 
@@ -1082,7 +1082,7 @@ http://mobilecdnbj.kugou.com/api/v3/rank/vol
 ##### Required
 Field | Description
 ------------ | -------------
-rankid | rankid of the list you want
+rankid | The rank's unique id
 
 >**Note:** Rank ID can be obtained from the list of rankings above
 
@@ -1530,3 +1530,347 @@ http://mobilecdnbj.kugou.com/api/v3/rank/vol?rankid=24971
 }
 ```
 </details>
+
+## Get List of Songs for the Ranking
+
+#### URL
+```
+http://mobilecdnbj.kugou.com/api/v3/rank/song?
+```
+#### Params
+##### Required
+Field | Description
+------------ | -------------
+rankid | The rank's unique ID
+volid | The Volume's unique ID
+
+>**Note:** Volume ID can be obtained from the above
+
+##### Optional
+Field | Description
+------------ | -------------
+pagesize | pagesize
+page | page
+Others: *version, ranktype, area_code, with_res_tag, plat*
+
+#### Example
+Getting top 5 songs for the DJ热歌榜 rankings
+```
+http://mobilecdnbj.kugou.com/api/v3/rank/song?volid=47843&rankid=24971&pagesize=5
+```
+<details><summary>Response:</summary>
+
+```json
+{
+    "status": 1,
+    "error": "",
+    "data": {
+        "timestamp": 1608368317,
+        "info": [{
+            "pay_type_320": 3,
+            "m4afilesize": 0,
+            "price_sq": 200,
+            "first": 0,
+            "filesize": 4048130,
+            "bitrate": 128,
+            "trans_param": {
+                "cid": 120368453,
+                "cpy_grade": 5,
+                "pay_block_tpl": 1,
+                "musicpack_advance": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "display": 0,
+                "cpy_attr0": 0
+            },
+            "price": 200,
+            "inlist": 1,
+            "old_cpy": 0,
+            "fail_process_sq": 4,
+            "pay_type": 3,
+            "musical": null,
+            "topic_url": "",
+            "fail_process_320": 4,
+            "pkg_price": 1,
+            "feetype": 0,
+            "filename": "花僮 - 浪子闲话 (DJ沈念(5)版)",
+            "price_320": 200,
+            "extname": "mp3",
+            "hash": "972735F8B0DF5455EC3BCAFE7B07A9A3",
+            "mvhash": "",
+            "topic_url_320": "",
+            "privilege": 8,
+            "album_audio_id": 279832674,
+            "addtime": "2020-12-16 11:50:42",
+            "pkg_price_320": 1,
+            "recommend_reason": "",
+            "rp_type": "audio",
+            "pkg_price_sq": 1,
+            "audio_id": 85639214,
+            "320filesize": 10120032,
+            "rp_publish": 1,
+            "has_accompany": 1,
+            "topic_url_sq": "",
+            "320privilege": 10,
+            "isfirst": 0,
+            "album_id": "39906034",
+            "fail_process": 4,
+            "320hash": "84894ECBB9D69861E6F69A482C0A97F8",
+            "sqhash": "52AE1F6A03ED48E9A03EB24C4FD696D4",
+            "remark": "浪子闲话",
+            "pay_type_sq": 3,
+            "duration": 252,
+            "sqprivilege": 10,
+            "sqfilesize": 33447569,
+            "issue": 51
+        }, {
+            "pay_type_320": 3,
+            "m4afilesize": 0,
+            "price_sq": 200,
+            "first": 0,
+            "filesize": 2911295,
+            "bitrate": 128,
+            "trans_param": {
+                "cid": 119281356,
+                "cpy_grade": 5,
+                "pay_block_tpl": 1,
+                "musicpack_advance": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "display": 0,
+                "cpy_attr0": 0
+            },
+            "price": 200,
+            "inlist": 1,
+            "old_cpy": 0,
+            "fail_process_sq": 4,
+            "pay_type": 3,
+            "musical": null,
+            "topic_url": "",
+            "fail_process_320": 4,
+            "pkg_price": 1,
+            "feetype": 0,
+            "filename": "IN-K、王忻辰 - 迷失幻境 (DJ版)",
+            "price_320": 200,
+            "extname": "mp3",
+            "hash": "FA18CD000786E17834BC4CA24FB9F0D7",
+            "mvhash": "A4A38C28554FD7E9B5D9E9CD91544C4F",
+            "topic_url_320": "",
+            "privilege": 8,
+            "album_audio_id": 278512735,
+            "addtime": "2020-12-16 11:50:42",
+            "pkg_price_320": 1,
+            "recommend_reason": "",
+            "rp_type": "audio",
+            "pkg_price_sq": 1,
+            "audio_id": 84786849,
+            "320filesize": 7277407,
+            "rp_publish": 1,
+            "has_accompany": 1,
+            "topic_url_sq": "",
+            "320privilege": 10,
+            "isfirst": 0,
+            "album_id": "39379466",
+            "fail_process": 4,
+            "320hash": "C066B727AD0DCBF3C86FA4F286109FDE",
+            "sqhash": "9E1E1425312ACFA30076CD44D9E68F2E",
+            "remark": "迷失幻境",
+            "pay_type_sq": 3,
+            "duration": 181,
+            "sqprivilege": 10,
+            "sqfilesize": 25702287,
+            "issue": 51
+        }, {
+            "pay_type_320": 3,
+            "m4afilesize": 0,
+            "price_sq": 200,
+            "first": 0,
+            "filesize": 3871182,
+            "bitrate": 128,
+            "trans_param": {
+                "cid": 119280727,
+                "cpy_attr0": 0,
+                "pay_block_tpl": 1,
+                "musicpack_advance": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "display": 0,
+                "cpy_grade": 5
+            },
+            "price": 200,
+            "inlist": 1,
+            "old_cpy": 0,
+            "fail_process_sq": 4,
+            "pay_type": 3,
+            "musical": null,
+            "topic_url": "",
+            "fail_process_320": 4,
+            "pkg_price": 1,
+            "feetype": 0,
+            "filename": "IN-K、王忻辰 - 落差 (DJ版)",
+            "price_320": 200,
+            "extname": "mp3",
+            "hash": "607770C67A77F3B25FEB16DD9FE313B6",
+            "mvhash": "",
+            "topic_url_320": "",
+            "privilege": 8,
+            "album_audio_id": 278512296,
+            "addtime": "2020-12-16 11:50:42",
+            "pkg_price_320": 1,
+            "recommend_reason": "",
+            "rp_type": "audio",
+            "pkg_price_sq": 1,
+            "audio_id": 84786502,
+            "320filesize": 9677889,
+            "rp_publish": 1,
+            "has_accompany": 1,
+            "topic_url_sq": "",
+            "320privilege": 10,
+            "isfirst": 0,
+            "album_id": "39769503",
+            "fail_process": 4,
+            "320hash": "EBD5858692A84BA751B392D1CF0347B9",
+            "sqhash": "86A54D7CB5524890E389937D83A6D646",
+            "remark": "落差",
+            "pay_type_sq": 3,
+            "duration": 241,
+            "sqprivilege": 10,
+            "sqfilesize": 34219490,
+            "issue": 51
+        }, {
+            "pay_type_320": 3,
+            "m4afilesize": 0,
+            "price_sq": 200,
+            "first": 0,
+            "filesize": 1936703,
+            "bitrate": 128,
+            "trans_param": {
+                "cid": 120708058,
+                "cpy_grade": 20,
+                "pay_block_tpl": 1,
+                "musicpack_advance": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "display": 0,
+                "cpy_attr0": 0
+            },
+            "price": 200,
+            "inlist": 1,
+            "old_cpy": 0,
+            "fail_process_sq": 4,
+            "pay_type": 3,
+            "musical": {
+                "publish_type": 1,
+                "publish_time": "2020-11-09 12:33:14",
+                "uploader": "好乐无荒"
+            },
+            "topic_url": "",
+            "fail_process_320": 4,
+            "pkg_price": 1,
+            "feetype": 0,
+            "filename": "是七叔呢 - 燕无歇 (DJ黑桃A版)",
+            "price_320": 200,
+            "extname": "mp3",
+            "hash": "91EF65B249A18B14760B359E9711FE69",
+            "mvhash": "",
+            "topic_url_320": "",
+            "privilege": 8,
+            "album_audio_id": 280554181,
+            "addtime": "2020-12-16 11:50:42",
+            "pkg_price_320": 1,
+            "recommend_reason": "",
+            "rp_type": "audio",
+            "pkg_price_sq": 1,
+            "audio_id": 86121893,
+            "320filesize": 4844416,
+            "rp_publish": 1,
+            "has_accompany": 1,
+            "topic_url_sq": "",
+            "320privilege": 10,
+            "isfirst": 0,
+            "album_id": "40020779",
+            "fail_process": 4,
+            "320hash": "2DB2BEE7E8CF6551FBA175CBDD05379F",
+            "sqhash": "A0D2EC38F7378E75F90B33638A628DC0",
+            "remark": "燕无歇（DJ黑桃A）( feat.是七叔呢)",
+            "pay_type_sq": 3,
+            "duration": 120,
+            "sqprivilege": 10,
+            "sqfilesize": 15186642,
+            "issue": 51
+        }, {
+            "pay_type_320": 3,
+            "m4afilesize": 0,
+            "price_sq": 200,
+            "first": 0,
+            "filesize": 3930950,
+            "bitrate": 128,
+            "trans_param": {
+                "cid": 115825960,
+                "cpy_grade": 5,
+                "pay_block_tpl": 1,
+                "musicpack_advance": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "display": 0,
+                "cpy_attr0": 0
+            },
+            "price": 200,
+            "inlist": 1,
+            "old_cpy": 0,
+            "fail_process_sq": 4,
+            "pay_type": 3,
+            "musical": null,
+            "topic_url": "",
+            "fail_process_320": 4,
+            "pkg_price": 1,
+            "feetype": 0,
+            "filename": "小乐哥 - 执迷不悟 (DJ版)",
+            "price_320": 200,
+            "extname": "mp3",
+            "hash": "F5D9FF3093BE6861506D058A851FAF0F",
+            "mvhash": "69455D3D8F47F373C0B9C3759A20D71A",
+            "topic_url_320": "",
+            "privilege": 8,
+            "album_audio_id": 275046110,
+            "addtime": "2020-12-16 11:50:43",
+            "pkg_price_320": 1,
+            "recommend_reason": "",
+            "rp_type": "audio",
+            "pkg_price_sq": 1,
+            "audio_id": 82521984,
+            "320filesize": 9827309,
+            "rp_publish": 1,
+            "has_accompany": 1,
+            "topic_url_sq": "",
+            "320privilege": 10,
+            "isfirst": 0,
+            "album_id": "39117070",
+            "fail_process": 4,
+            "320hash": "BD489F4D4C5E4CC0A4AAECFE818D90BA",
+            "sqhash": "B6E521EB298EE8396CA68F6D67EE6C1B",
+            "remark": "执迷不悟",
+            "pay_type_sq": 3,
+            "duration": 245,
+            "sqprivilege": 10,
+            "sqfilesize": 31687954,
+            "issue": 51
+        }],
+        "total": 100
+    },
+    "errcode": 0
+}
+```
+</details>
+
+## Others
+
+#### List of New Songs
+: This is listed as 新歌首发 on the home page
+```
+http://mobilecdnbj.kugou.com/api/v3/rank/newsong?version=9108&plat=0&with_cover=1&pagesize=100&type=1&area_code=1&page=1&with_res_tag=1
+```
+#### Get all songs from an Album based on Album ID
+```
+http://mobilecdn.kugou.com/api/v3/album/song?version=9108&albumid=1589936&plat=0&pagesize=100&area_code=1&page=1&with_res_tag=1
+```
