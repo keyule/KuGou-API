@@ -37,7 +37,7 @@ http://msearchcdn.kugou.com/api/v3/search/song?&plat=0&keyword=安静&tagtype=�
 ```
 <details><summary>Response:</summary>
   
-  ```javascript
+  ```json
   {
     "status": 1,
     "error": "",
@@ -160,7 +160,7 @@ https://wwwapi.kugou.com/yy/index.php?r=play/getdata&callback=jQuery191077329736
 ```
 <details><summary>Response:</summary>
   
-  ```javascript
+  ```json
 jQuery19107732973609967178_1607543233092({
     "status": 1,
     "err_code": 0,
@@ -198,4 +198,876 @@ jQuery19107732973609967178_1607543233092({
     }
 });
   ```
+</details>
+
+## Get list of Rankings
+
+#### URL
+```
+http://mobilecdnbj.kugou.com/api/v3/rank/list
+```
+#### Params
+##### Optional
+Field | Description
+------------ | -------------
+withsong | 1 will show the top 3 songs
+
+Others: *version, plat, showtype, parentid, apiver, area_code, with_res*
+
+#### Example
+Getting list of Rankings and show top 3 songs
+```
+http://mobilecdnbj.kugou.com/api/v3/rank/list&withsong=1
+```
+<details><summary>Response:</summary>
+
+```json
+{
+    "status": 1,
+    "error": "",
+    "data": {
+        "timestamp": 1608365895,
+        "info": [{
+            "rankid": 6666,
+            "id": 1,
+            "intro": "数据来源：酷狗\r\n排序方式：按歌曲搜索播放量的涨幅排序\r\n更新周期：每天",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20200914\/20200914155202513813.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190906\/20190906162522894877.jpg",
+            "jump_title": "",
+            "rankname": "酷狗飙升榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175722740417.png",
+            "jump_url": "",
+            "img_9": "",
+            "classify": 1,
+            "update_frequency": "每天",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190906\/20190906162520714932.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "铭志 - 他只是经过 (完整版)"
+            }, {
+                "songname": "刘若英 - 成全"
+            }, {
+                "songname": "黄品源、莫文蔚 - 那么爱你为什么"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20190214\/20190214100333414437.jpg",
+            "ranktype": 2,
+            "custom_type": 0,
+            "issue": 354
+        }, {
+            "rankid": 8888,
+            "id": 2,
+            "intro": "数据来源：酷狗\r\n排序方式：按每日歌曲播放总量排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201203\/20201203150402833578.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122516438289.jpg",
+            "jump_title": "",
+            "rankname": "酷狗TOP500",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175730485341.png",
+            "jump_url": "",
+            "img_9": "",
+            "classify": 1,
+            "update_frequency": "每天",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122513972113.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "回小仙 - 醒不来的梦"
+            }, {
+                "songname": "是七叔呢 - 踏山河"
+            }, {
+                "songname": "IN-K、王忻辰 - 迷失幻境 (DJ版)"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019122517263545.jpg",
+            "ranktype": 2,
+            "custom_type": 0,
+            "issue": 354
+        }, {
+            "rankid": 37361,
+            "id": 227,
+            "intro": "数据来源：浮浮雷达（千万用户的识曲选择，遛街刷抖必备）和酷狗听歌识曲。\r\n排序方式：过去7天识别最多的top100首歌曲，告诉你时下最热歌曲。\r\n更新周期：周一至周五每天",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201203\/20201203124801937215.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190808\/20190808200003312447.jpg",
+            "jump_title": "",
+            "rankname": "酷狗雷达榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175741530197.png",
+            "jump_url": "",
+            "img_9": "",
+            "classify": 1,
+            "update_frequency": "工作日",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190808\/20190808200002300015.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "是七叔呢 - 踏山河"
+            }, {
+                "songname": "花僮 - 浪子闲话 (加速版)(DJ名龙版)"
+            }, {
+                "songname": "是七叔呢 - 燕无歇 (DJ黑桃A版)"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20190808\/20190808200005885980.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 252
+        }, {
+            "rankid": 23784,
+            "id": 65,
+            "intro": "数据来源：酷狗网络类歌曲\r\n排序方式：按歌曲搜索播放一周总量排序\r\n更新周期：周一",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201203\/20201203150402833578.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122442518606.jpg",
+            "jump_title": "",
+            "rankname": "网络红歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175751510685.png",
+            "jump_url": "",
+            "img_9": "",
+            "classify": 1,
+            "update_frequency": "周一",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122440628627.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "回小仙 - 醒不来的梦"
+            }, {
+                "songname": "是七叔呢 - 踏山河"
+            }, {
+                "songname": "秋原依 - 错季"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019122444129869.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 49
+        }, {
+            "rankid": 24971,
+            "id": 109,
+            "intro": "数据来源：酷狗DJ类歌曲\r\n排序方式：按歌曲搜索播放一周总量排序\r\n更新周期：周三",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201105\/20201105152707626594.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122333384421.jpg",
+            "jump_title": "",
+            "rankname": "DJ热歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175759623740.png",
+            "jump_url": "",
+            "img_9": "",
+            "classify": 1,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122331572959.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "花僮 - 浪子闲话 (DJ沈念(5)版)"
+            }, {
+                "songname": "IN-K、王忻辰 - 迷失幻境 (DJ版)"
+            }, {
+                "songname": "IN-K、王忻辰 - 落差 (DJ版)"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019122335144078.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 35811,
+            "id": 215,
+            "intro": "数据来源：酷狗\r\n排序方式：按会员专享歌曲播放总量排序\r\n更新周期：每周一",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20200909\/20200909135350181905.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190311\/20190311103835919973.png",
+            "jump_title": "",
+            "rankname": "会员专享热歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175807440272.png",
+            "jump_url": "",
+            "img_9": "",
+            "classify": 1,
+            "update_frequency": "周一",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190311\/20190311103833106637.png",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "周杰伦 - 稻香"
+            }, {
+                "songname": "Ava Max - Salt"
+            }, {
+                "songname": "刘德华 - 暗里着迷"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20190311\/20190311103837451504.png",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 41
+        }, {
+            "rankid": 31308,
+            "id": 35,
+            "intro": "数据来源：酷狗一个月内发行的华语新歌\r\n排序方式：按播放量、搜索量等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201214\/20201214175701864670.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122308789982.jpg",
+            "jump_title": "",
+            "rankname": "华语新歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174155391977.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174154367599.jpg",
+            "classify": 2,
+            "update_frequency": "工作日",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122306857444.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "花僮 - 上仙"
+            }, {
+                "songname": "周深 - 和光同尘"
+            }, {
+                "songname": "白小白 - 爱我就别走了"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019122310609161.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 251
+        }, {
+            "rankid": 31310,
+            "id": 36,
+            "intro": "数据来源：酷狗一个月内发行的欧美新歌\r\n排序方式：按播放量、搜索量等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201130\/20201130235604703264.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122240929645.jpg",
+            "jump_title": "",
+            "rankname": "欧美新歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174215666798.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174213704743.jpg",
+            "classify": 2,
+            "update_frequency": "工作日",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122238418415.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "VIZE、Alan Walker、Leony!、Edward Artemyev - Space Melody (Edward Artemyev)"
+            }, {
+                "songname": "Taylor Swift - willow (moonlit witch version)"
+            }, {
+                "songname": "Sam Smith - Have Yourself a Merry Little Christmas"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019122242395797.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 253
+        }, {
+            "rankid": 31311,
+            "id": 67,
+            "intro": "数据来源：酷狗一个月内发行的韩语新歌\r\n排序方式：按播放量、搜索量等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201215\/20201215104605616172.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122158610214.jpg",
+            "jump_title": "",
+            "rankname": "韩国新歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174232828133.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174231152346.jpg",
+            "classify": 2,
+            "update_frequency": "工作日",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122156828017.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "太妍 - What Do I Call You"
+            }, {
+                "songname": "太妍 - To the moon"
+            }, {
+                "songname": "太妍 - Playlist"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019122200515578.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 253
+        }, {
+            "rankid": 31312,
+            "id": 69,
+            "intro": "数据来源：酷狗一个月内发行的日语新歌\r\n排序方式：按播放量、搜索量等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201124\/20201124155112428866.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122121141047.jpg",
+            "jump_title": "",
+            "rankname": "日本新歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174248928394.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174246536761.jpg",
+            "classify": 2,
+            "update_frequency": "工作日",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122119973845.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "初音ミク、MiveMusic - 元气与幸运"
+            }, {
+                "songname": "AKB48 - 10年桜 (10年樱)"
+            }, {
+                "songname": "AKB48 - 前しか向かねえ (勇往直前)"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019122124188716.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 253
+        }, {
+            "rankid": 31313,
+            "id": 39,
+            "intro": "数据来源：酷狗半年内发行的粤语新歌\r\n排序方式：按播放量、搜索量等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201214\/20201214202502980624.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122018837980.jpg",
+            "jump_title": "",
+            "rankname": "粤语新歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190910\/20190910102927369195.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190910\/20190910102926520806.jpg",
+            "classify": 2,
+            "update_frequency": "工作日",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019122016271749.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "刘德华 - 原谅我 (粤语版)"
+            }, {
+                "songname": "刘德华 - 孤雁"
+            }, {
+                "songname": "刘德华 - 爱永远存在"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019122021568840.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 251
+        }, {
+            "rankid": 33162,
+            "id": 123,
+            "intro": "数据来源：酷狗ACG类歌曲\r\n排序方式：按搜索播放一周总量排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201211\/20201211155601353392.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190911\/20190911195358567855.jpg",
+            "jump_title": "",
+            "rankname": "ACG新歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201019\/20201019153148570872.png",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190911\/20190911195400836023.jpg",
+            "classify": 1,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190911\/20190911195356382314.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "洛天依 - 音乐之路"
+            }, {
+                "songname": "洛天依、言和 - 享受 想瘦"
+            }, {
+                "songname": "洛天依 - 高贵的野蛮人"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20190911\/20190911195359896034.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 21101,
+            "id": 30,
+            "intro": "数据来源：酷狗\r\n排序方式：根据酷狗用户的分享、转发、下载量综合排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201210\/20201210185004290362.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121858279252.jpg",
+            "jump_title": "",
+            "rankname": "酷狗分享榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175816902442.png",
+            "jump_url": "",
+            "img_9": "",
+            "classify": 1,
+            "update_frequency": "周二",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121855584689.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "青微工作室、奇然 - 破浪"
+            }, {
+                "songname": "王琪 - 可可托海的牧羊人"
+            }, {
+                "songname": "回小仙 - 醒不来的梦"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121900772347.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 50
+        }, {
+            "rankid": 30972,
+            "id": 167,
+            "intro": "数据来源：腾讯原创音乐\r\n排序方式：按播放量、话题热度等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201215\/20201215143735942739.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190624\/20190624154847939871.jpg",
+            "jump_title": "",
+            "rankname": "腾讯音乐人原创榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175825226653.png",
+            "jump_url": "",
+            "img_9": "",
+            "classify": 1,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190624\/20190624153614300323.png",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "Bomb比尔 - 1022-比尔的歌"
+            }, {
+                "songname": "赵政豪 - 椰城邮信"
+            }, {
+                "songname": "JIHU、Sugar - Going Down"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20190624\/20190624154340922603.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 22603,
+            "id": 42,
+            "intro": "数据来源：5sing\r\n排序方式：根据5sing原创歌曲每周综合热度来排序\r\n更新周期：周一",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201104\/20201104175510980273.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121805248654.jpg",
+            "jump_title": "",
+            "rankname": "5sing音乐榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201010\/20201010114440874606.png",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200218\/20200218112936134809.jpg",
+            "classify": 1,
+            "update_frequency": "周一",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121803749516.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "伦桑、一棵小葱张晓涵 - 字正腔圆"
+            }, {
+                "songname": "叶洛洛 - 词牌名"
+            }, {
+                "songname": "萧忆情Alex - 姑娘安好"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121807146762.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 50
+        }, {
+            "rankid": 33160,
+            "id": 119,
+            "intro": "数据来源：酷狗电音类别歌曲\r\n排序方式：按搜索播放一周总量排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201204\/20201204164651345673.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121747524588.jpg",
+            "jump_title": "",
+            "rankname": "电音热歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174449662435.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174447336807.jpg",
+            "classify": 3,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121744206764.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "傅梦彤 - 潮汐 (Natural)"
+            }, {
+                "songname": "灼夭、小田音乐社 - 鲸落万物生"
+            }, {
+                "songname": "Phao、CM1X - Hai Phút Hơn"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121749428993.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 21335,
+            "id": 32,
+            "intro": "数据来源：繁星\r\n排序方式：按繁星网友投票数排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201105\/20201105152707626594.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20180824\/20180824185745798417.png",
+            "jump_title": "",
+            "rankname": "繁星音乐榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174504223797.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174502141408.jpg",
+            "classify": 3,
+            "update_frequency": "每半个月",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20180824\/20180824185738518086.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "花僮 - 浪子闲话"
+            }, {
+                "songname": "王琪 - 可可托海的牧羊人"
+            }, {
+                "songname": "小阿枫 - 醉倾城"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20180824\/20180824185748528807.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 21
+        }, {
+            "rankid": 44412,
+            "id": 265,
+            "intro": "酷狗说唱榜，替你准备最优质最前沿的中文说唱音乐作品",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20200717\/20200717155004986560.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200708\/20200708214042268851.jpg",
+            "jump_title": "",
+            "rankname": "酷狗说唱榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200708\/20200708214043368250.png",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200708\/20200708214114341727.jpg",
+            "classify": 3,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200708\/20200708214041363780.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "Lil Ghost小鬼 - 偏爱 (Live)"
+            }, {
+                "songname": "R1SE姚琛 - 不屑·NEVERMIND"
+            }, {
+                "songname": "Jac - 11"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20200708\/20200708214043722340.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 24
+        }, {
+            "rankid": 33161,
+            "id": 79,
+            "intro": "数据来源：酷狗国风类歌曲\r\n排序方式：按搜索播放一周总量排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201208\/20201208112606522316.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200908\/20200908194553602319.jpg",
+            "jump_title": "",
+            "rankname": "国风新歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201010\/20201010110127855584.png",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200908\/20200908194947749696.jpg",
+            "classify": 2,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200908\/20200908194552887844.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "王一博 - 熹微"
+            }, {
+                "songname": "封茗囧菌、天涯未晚 - 风月迟迟来"
+            }, {
+                "songname": "花僮 - 不见人归来"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20200908\/20200908194555197108.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 46910,
+            "id": 275,
+            "intro": "数据来源：按综艺新歌热度综合排序\r\n排序方式：按播放量、搜索量等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201213\/20201213120103596319.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201109\/20201109170516777658.png",
+            "jump_title": "",
+            "rankname": "综艺新歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201109\/20201109170519725585.png",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201109\/20201109170541307701.png",
+            "classify": 2,
+            "update_frequency": "周三更新",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201109\/20201109170514307375.png",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "李克勤、周深 - 爱情转移 (粤语版) (Live)"
+            }, {
+                "songname": "常石磊、王源 - 血腥爱情故事 (Live)"
+            }, {
+                "songname": "张信哲、太一 - 口是心非 (Live)"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20201109\/20201109170517558959.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 7
+        }, {
+            "rankid": 33163,
+            "id": 77,
+            "intro": "数据来源：酷狗影视类歌曲\r\n排序方式：按搜索播放一周总量排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201207\/20201207203010500213.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121701875027.jpg",
+            "jump_title": "",
+            "rankname": "影视金曲榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174854191515.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174852244391.jpg",
+            "classify": 3,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121659616445.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "吴青峰 - 如果声音不记得【《如果声音不记得》电影主题曲】"
+            }, {
+                "songname": "张碧晨 - 骗【《如果声音不记得》电影插曲】"
+            }, {
+                "songname": "薛之谦 - 野心【《缉魂》电影推广曲】"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121704873377.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 33166,
+            "id": 193,
+            "intro": "数据来源：酷狗欧美歌曲\r\n排序方式：按搜索播放一周总量排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20191211\/20191211153103312934.png",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121544655833.jpg",
+            "jump_title": "",
+            "rankname": "欧美金曲榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174931685280.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174929869298.jpg",
+            "classify": 3,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121542609944.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "Ava Max - Salt"
+            }, {
+                "songname": "Sasha Sloan - Dancing With Your Ghost"
+            }, {
+                "songname": "Hawk Nelson - Sold Out"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121546998825.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 33165,
+            "id": 38,
+            "intro": "数据来源：酷狗粤语歌曲\r\n排序方式：按搜索播放一周总量排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20200927\/20200927181659368520.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121611360472.jpg",
+            "jump_title": "",
+            "rankname": "粤语金曲榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174949759288.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909174947924578.jpg",
+            "classify": 3,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121609698871.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "刘德华 - 暗里着迷"
+            }, {
+                "songname": "街道办GDC、欧阳耀莹 - 春娇与志明"
+            }, {
+                "songname": "陈慧娴 - 千千阙歌"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121613673415.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 36107,
+            "id": 217,
+            "intro": "数据来源：酷狗小语种歌曲\r\n排序方式：按搜索播放一周总量排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20200310\/20200310170034956740.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190403\/20190403162618621048.jpg",
+            "jump_title": "",
+            "rankname": "小语种热歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175105662534.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175104364464.jpg",
+            "classify": 3,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190403\/20190403162616176601.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "Phao、CM1X - Hai Phút Hơn"
+            }, {
+                "songname": "Elgit Doda - Larg"
+            }, {
+                "songname": "Rauf & Faik - Колыбельная"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20190403\/20190403162620781596.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 50
+        }, {
+            "rankid": 4681,
+            "id": 10,
+            "intro": "数据来源：美国Billboard\r\n排序方式：根据歌曲在美国的销量、电台播放量、流媒体下载量等指标进行排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20200909\/20200909132733952925.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121339813327.jpg",
+            "jump_title": "",
+            "rankname": "美国BillBoard榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175149284640.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175148246788.jpg",
+            "classify": 4,
+            "update_frequency": "周四",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121336278152.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "Mariah Carey - All I Want For Christmas Is You"
+            }, {
+                "songname": "24KGoldn、iann dior - Mood"
+            }, {
+                "songname": "Brenda Lee - Rockin' Around The Christmas Tree"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121340103598.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 51
+        }, {
+            "rankid": 4680,
+            "id": 12,
+            "intro": "数据来源：英国Single Chart\r\n排序方式：根据歌曲在英国的一周销量进行排序\r\n更新周期：周一",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20200909\/20200909132733952925.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121316839345.jpg",
+            "jump_title": "",
+            "rankname": "英国单曲榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175205814368.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175204409709.jpg",
+            "classify": 4,
+            "update_frequency": "周一",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121314950680.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "Mariah Carey - All I Want For Christmas Is You"
+            }, {
+                "songname": "Wham! - Last Christmas (Single Version)"
+            }, {
+                "songname": "Ariana Grande - positions"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121317188050.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 50
+        }, {
+            "rankid": 4673,
+            "id": 8,
+            "intro": "数据来源：日本Oricon\r\n排序方式：根据日本实体CD销量进行排序\r\n更新周期：周三",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201203\/20201203213920459874.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121248478803.jpg",
+            "jump_title": "",
+            "rankname": "日本公信榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175221447910.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20190909\/20190909175220462967.jpg",
+            "classify": 4,
+            "update_frequency": "周三",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20181019\/20181019121246308170.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "櫻坂46 - Nobody's fault (任何人都没错)"
+            }, {
+                "songname": "NiziU - Step and a step"
+            }, {
+                "songname": "LiSA - 炎"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121251431378.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 50
+        }, {
+            "rankid": 38623,
+            "id": 9,
+            "intro": "数据来源：韩国Melon官网\r\n排序方式：根据Melon官方的周榜排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201123\/20201123133507923552.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20191021\/20191021201705225728.jpg",
+            "jump_title": "",
+            "rankname": "韩国Melon音乐榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20191021\/20191021201717772506.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20191021\/20191021201714155508.jpg",
+            "classify": 4,
+            "update_frequency": "周一",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20191021\/20191021201704859649.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "미란이、먼치맨、Khundi Panda、MUSHVENOM、JUSTHIS - VVS (Prod. GroovyRoom)"
+            }, {
+                "songname": "오승택、Giriboy、BIG Naughty - 내일이 오면 (Tomorrow)"
+            }, {
+                "songname": "BTS(防弹少年团) - Dynamite"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20181019\/20181019121225649566.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 50
+        }, {
+            "rankid": 42807,
+            "id": 251,
+            "intro": "数据来源：joox本地歌曲播放数据\r\n排序方式：按播放量、话题热度等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201119\/20201119171503191308.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200320\/20200320185607939528.jpg",
+            "jump_title": "",
+            "rankname": "joox本地热歌榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200320\/20200320185610630505.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200320\/20200320185609894362.jpg",
+            "classify": 4,
+            "update_frequency": "周五",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200320\/20200320185606356366.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "陈奕迅 - 是但求其爱"
+            }, {
+                "songname": "容祖儿 - 东京人寿"
+            }, {
+                "songname": "林家谦 - 时光倒流一句话"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20200320\/20200320185608883318.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 46
+        }, {
+            "rankid": 42808,
+            "id": 253,
+            "intro": "数据来源：KKBOX数位音乐风云榜歌曲数据\r\n排序方式：按播放量、话题热度等维度排序",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201113\/20201113100455982158.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200320\/20200320190008242289.jpg",
+            "jump_title": "",
+            "rankname": "台湾KKBOX风云榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200320\/20200320190011360333.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200320\/20200320190010792757.jpg",
+            "classify": 4,
+            "update_frequency": "周五",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20200320\/20200320190007542793.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "陈昊森 - 刻在我心底的名字"
+            }, {
+                "songname": "陈零九 - 千年以后 (录音室版)"
+            }, {
+                "songname": "陈芳语、E-SO - 邮票"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20200320\/20200320190009931456.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 46
+        }, {
+            "rankid": 46868,
+            "id": 273,
+            "intro": "在日本最大的音乐频道「SPACE SHOWER TV」中被介绍的榜单。\r\n\r\nSPACE SHOWER TV设立于1989年，因通过MV和直播节目介绍了日本的众多艺人而备受好评。\r\n本榜单根据频道上的播放次数计算，为你展现日本音乐的流行趋势。\r\n每周三更新",
+            "album_img_9": "http:\/\/imge.kugou.com\/stdmusic\/{size}\/20201116\/20201116160323251505.jpg",
+            "banner7url": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201028\/20201028152646615355.jpg",
+            "jump_title": "",
+            "rankname": "日本SPACE SHOWER榜",
+            "isvol": 1,
+            "banner_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201028\/20201028160743576779.jpg",
+            "jump_url": "",
+            "img_9": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201028\/20201028160742765173.jpg",
+            "classify": 4,
+            "update_frequency": "周三更新",
+            "imgurl": "http:\/\/imge.kugou.com\/mcommon\/{size}\/20201028\/20201028152644700630.jpg",
+            "show_play_button": 0,
+            "songinfo": [{
+                "songname": "King Gnu - 千両役者"
+            }, {
+                "songname": "Sekai no Owari - silent"
+            }, {
+                "songname": "福山雅治 - 心音"
+            }],
+            "bannerurl": "http:\/\/imge.kugou.com\/mcommonbanner\/{size}\/20201028\/20201028152647239085.jpg",
+            "ranktype": 1,
+            "custom_type": 0,
+            "issue": 8
+        }],
+        "total": 31
+    },
+    "errcode": 0
+}
+```
 </details>
