@@ -1,6 +1,7 @@
 # KuGou API
 Just some documentation on KuGou's API and some scripts  
-This would help people outside of China, and not get hit with 'Area not Supported'
+Most of the other stuff on github for KuGou are all for people inside China and dont work for people outside China
+Hopefully, this would help people outside of China, and not get hit with 'Area not Supported'
 
 ## Example Scripts:
 
