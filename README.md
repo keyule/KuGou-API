@@ -26,7 +26,7 @@ highlight | highlights the title eg: em,br
 pagesize | pagesize
 page | page
   
-Others that I have no idea does what: *showtype, sver, correct, api_ver, version, tag, with_res_tag*
+Others that I have no idea does what: *showtype, sver, correct, api_ver, tag, with_res_tag*
 
 #### Example
 Searching for 安静 all versions. Return 1 result
