@@ -15,6 +15,8 @@ Field | Description
 ------------ | -------------
 plat | plat=0 is required
 keyword | What you want to search for
+version | `9108` is required 
+
 ##### Optional
 Field | Description
 ------------ | -------------
@@ -29,7 +31,7 @@ Others that I have no idea does what: *showtype, sver, correct, api_ver, version
 #### Example
 Searching for 安静 all versions. Return 1 result
 ```
-http://msearchcdn.kugou.com/api/v3/search/song?&plat=0&keyword=安静&tagtype=全部&pagesize=1
+http://msearchcdn.kugou.com/api/v3/search/song?&plat=0&keyword=安静&tagtype=全部&pagesize=1&version=9108
 ```
 <details><summary>Response:</summary>
   
