@@ -1,5 +1,5 @@
 '''
-Downloads the top 100 songs for that particular ranking list
+Prints the top 100 songs for that particular ranking list
 Example: Ranking ID = 6666
 
 Requirements:
